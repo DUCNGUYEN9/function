@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      function minArray(arr) {
+        if (arr.length == 0) return -1;
+
+        let min = 0;
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = i;
+          }
+        }
+        return min;
+      }
+      let arr = [1, 2, 3, -1];
+      let result = minArray(arr);
+      if (result === -1) {
+        console.log("mảng rỗng");
+      } else {
+        console.log("min of index:  ", result);
+      }
+    </script>
+  </body>
+</html>
